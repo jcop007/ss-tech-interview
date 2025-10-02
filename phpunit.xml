@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/silverstripe/framework/tests/bootstrap.php" colors="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage includeUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">app</directory>
+    </include>
+    <exclude>
+      <directory suffix=".php">app/tests/</directory>
+      <file>app/_config.php</file>
+    </exclude>
+  </coverage>
+  <php>
+    <get name="db" value="sqlite3"/>
+    <get name="flush" value="1"/>
+  </php>
+  <testsuite name="Default">
+    <directory>app/test/unit/</directory>
+  </testsuite>
+  <groups>
+    <exclude>
+      <group>sanitychecks</group>
+    </exclude>
+  </groups>
+</phpunit>
