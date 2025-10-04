@@ -8,3 +8,5 @@
 .phpunit.result.cache
 .vscode/
 silverstripe-error.log
+.graphql-generated/
+public/_graphql/
