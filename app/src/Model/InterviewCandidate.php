@@ -12,11 +12,13 @@ class InterviewCandidate extends DataObject
     private static $db = [
         'Name' => 'Varchar(255)',
         'CoverLetter' => 'Text',
+        'Status' => "Enum('Pending, Approved, Declined', 'Pending')",
     ];
 
     private static $summary_fields = [
         'Name' => 'Candidate Name',
         'CoverLetter' => 'Cover Letter',
+        'Status' => 'Status',
     ];
 
     private static $has_one = [
