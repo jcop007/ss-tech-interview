@@ -38,7 +38,7 @@ class InterviewCandidateController extends PageController
 
     public function doCandidateSubmit(array $data, Form $form)
     {
-        if (strlen($data['CoverLetter']) < 20) {
+        if (str_word_count($data['CoverLetter']) < 20) {
             $form->sessionFieldError('Your cover letter should be at least 20 words', 'CoverLetter');
             return $this->redirectBack();
         }
