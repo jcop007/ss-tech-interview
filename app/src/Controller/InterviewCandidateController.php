@@ -47,7 +47,9 @@ class InterviewCandidateController extends PageController
         $form->saveInto($candidate);
         $candidate->write();
 
-        $form->sessionMessage('Submission successful, thanks!', ValidationResult::TYPE_GOOD);
+        $name = $data['Name'] ??  '';
+
+        $form->sessionMessage('Submission successful, thanks ' . $name . '!', ValidationResult::TYPE_GOOD);
 
         return $this->redirectBack();
     }
