@@ -33,7 +33,7 @@ class InterviewCandidateControllerTest extends FunctionalTest
         ]);
         $body = $response->getBody();
 
-        $this->assertContains(
+        $this->assertStringContainsString(
             'Your cover letter should be at least 20 words',
             $body,
             'Should validate CoverLetter field'
@@ -50,7 +50,7 @@ class InterviewCandidateControllerTest extends FunctionalTest
         ]);
         $body = $response->getBody();
 
-        $this->assertNotContains(
+        $this->assertStringNotContainsString(
             'Your cover letter should be at least 20 words',
             $body,
             'Should validate CoverLetter field'
