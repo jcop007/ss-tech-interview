@@ -28,7 +28,7 @@ class InterviewCandidateControllerTest extends FunctionalTest
         $this->get('/apply/');
         $response = $this->post('/apply/CandidateSubmissionForm/', [
             'Name' => 'Test Candidate',
-            'CoverLetter' => 'Hullo',
+            'CoverLetter' => 'Hullo this cover letter is too short it should be 20 words.',
             'CV' => 'Fake',
         ]);
         $body = $response->getBody();
