@@ -29,4 +29,14 @@ class InterviewCandidate extends DataObject
         'CV'
     ];
 
+    public function getCMSFields()
+    {
+        $fields = parent::getCMSFields();
+        // Only show status field when editing an existing record, all new records should start as pending
+        if (!$this->ID) {
+            $fields->removeByName('Status');
+        }
+        return $fields;
+    }
+
 }
