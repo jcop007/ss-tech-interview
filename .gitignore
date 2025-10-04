@@ -5,7 +5,6 @@
 /_resources/
 /public/_resources/
 .DS_Store
-/public/.htaccess
 .phpunit.result.cache
 .vscode/
 silverstripe-error.log
