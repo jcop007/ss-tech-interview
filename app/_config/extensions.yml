@@ -1,0 +1,4 @@
+
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - SSTechInterview\Extensions\SiteConfigExtension
